@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+</head>
+<style>
+    body,html{
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        min-width: 100vw;
+        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/257418/andy-holmes-698828-unsplash.jpg');
+        margin: 0; 
+        height: 100%; 
+        overflow: hidden;
+        color: white;
+        font-family: 'Muli', sans-serif;
+    }
+    .center{
+        position: absolute;
+        top: 32%;
+        left: 25%;
+        width: 50%;
+        /* border: 3px solid green; */
+        padding: 10px;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .semi-transparent-button {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 8px;
+  width: 50%;
+  max-width: 200px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+}
+</style>
+<body>
+    <div class="center">
+        <h1 id="_404">404</h1>
+        <p> Page not found </p>
+        <p>This may not mean anything</p>
+        <p> You have probably reached a wrong URL</p>
+        <a class="semi-transparent-button" href="/home">Go Back Home</a>
+    </div>
+
+</body>
+<script>
+    const _404 = document.querySelector('#_404');
+    let output = 0;
+    const timer = setInterval(() => {
+       _404.textContent = output;
+       output = output + 40;
+       if(output>400)
+        {
+            _404.textContent = "404";
+            clearInterval(timer);
+        }
+    },50);
+</script>
+</html>

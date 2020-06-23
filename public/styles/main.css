@@ -1,0 +1,56 @@
+/* nav a .navbar-brand{
+    margin-right: 60px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    display: inline-block;
+
+} */
+body {
+    /* padding-top: 70px; */
+    font-family: 'Muli', sans-serif;
+  }
+nav{
+    margin-bottom: 50px;
+}
+.card{
+    width: 30%;
+    margin: 1.66%;
+    float: left;
+    overflow: hidden;
+    box-shadow: 3px 3px 3px 3px darkgray;
+}
+.card-text.confirmed{
+    color: #007bff;
+}
+.card-text.deceased{ 
+    color: #d61139;
+}
+.card-text.recovered{
+    color: forestgreen;
+}
+.global_data, .global_data h5{
+    font-size: x-large; 
+}
+.global_data::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#WorldMap,#colGraph,#IndianMap,#LineGraph{
+    padding: 10px;
+    margin : 40px 0;
+    border: 1px #888888 solid;
+    box-shadow: 5px 5px 3px 3px #888888;
+    
+}   
+
+header h1{
+    font-size: 50px;
+    font-weight: 400;
+}
+.headings{
+    font-size: 25px;
+    margin-top: 15px;
+    color: #3e4c4f;
+}
