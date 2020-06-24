@@ -52,13 +52,12 @@ WorstAffectedCountries = async () =>{
     let i =0;
     for(i=1;i<6;i++)
         array.push([response[i].country,response[i].cases]);
-
     return array;
 };
 
 
 drawChart = function() {
-    console.log(country_data);
+    //console.log(country_data);
     var data = new google.visualization.arrayToDataTable(country_data);
       const options = {
           colors : ['#339cff'],
@@ -78,3 +77,8 @@ WorstAffectedCountries().then(data=>{
     google.charts.setOnLoadCallback(drawChart);
 })
 .catch(err=>console.log(err));
+const ColumnGraphDiv = document.querySelector('#colGraph');
+
+ColumnGraphDiv.addEventListener('onshow',()=>{
+console.log('working');
+});

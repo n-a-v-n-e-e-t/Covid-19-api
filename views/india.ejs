@@ -23,6 +23,16 @@
       </div>
     </div>
   </div>
+  <div class="updates text-center">
+    <h2>Recent Updates</h2>
+    <div class="d-flex flex-column mb-3">
+      <div class="bd-highlight new"><%= updates[0] %></div>
+      <div class="bd-highlight new"> <%= updates[1] %></div>
+      <div class="bd-highlight new"> <%= updates[2] %></div>
+      <div class="bd-highlight new"> <%= updates[3] %></div>
+      <div class="bd-highlight new"> <%= updates[4] %></div>
+    </div>
+  </div>
   <div class="headings">
     <p>India Geocoded Graph</p>
   </div>
@@ -32,7 +42,8 @@
             <p>Daily new cases since March 1st</p>
         </div>
          <div id="LineGraph" style="width: 1100px; height: 750px;"></div>
-</div>
+         <%-include('./partials/sticky_footer.ejs')%>
+<script src="js/dom_manipulation.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="js/indian.js"></script>
 <%-include('./partials/footer.ejs')%>

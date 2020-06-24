@@ -10,7 +10,7 @@ let timelineData;
 getcovidData = async() =>{
     const url = 'https://api.covid19india.org/data.json';
     let response = await fetch(url);
-    console.log(response);
+    //console.log(response);
     response = await response.json();
     response = response.statewise;
     //console.log(response);
@@ -35,10 +35,6 @@ google.charts.setOnLoadCallback(drawRegionsMap);
 function drawRegionsMap() {   
     var options = {
         colorAxis:{colors:['#abfbff','#00688B']},
-             magnifyingGlass :{
-                enable: true, 
-                zoomFactor: 7.5
-             },
         region:'IN',
         resolution: 'provinces'
     };
@@ -50,7 +46,6 @@ function drawRegionsMap() {
 getcovidData()
 .then(array=>{
     countrydata = array;  
-    console.log('yes'); 
 })
 .catch(err=>console.log);
 
@@ -73,7 +68,7 @@ Timeline = async() =>{
 Timeline()
 .then(array =>{
     timelineData = array;
-    console.log(timelineData);
+   // console.log(timelineData);
     google.charts.setOnLoadCallback(drawChart);
 })
 .catch(err=>console.log(err));
@@ -85,6 +80,7 @@ const drawChart = function() {
         var options ={
             curveType: 'function',
             title: 'Daily New Cases from 1st March',
+            colors: ['#336B87'],
             vAxis:{
                     viewWindow: {min: 0},
                     title: 'Cases'

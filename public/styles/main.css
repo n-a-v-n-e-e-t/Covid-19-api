@@ -7,12 +7,14 @@
 
 } */
 body {
-    /* padding-top: 70px; */
+    padding-top: 80px;
     font-family: 'Muli', sans-serif;
-  }
+}
+
 nav{
     margin-bottom: 50px;
 }
+
 .card{
     width: 30%;
     margin: 1.66%;
@@ -53,4 +55,33 @@ header h1{
     font-size: 25px;
     margin-top: 15px;
     color: #3e4c4f;
+}
+
+div .navbar-nav.ml-auto a{
+    color: white;
+}
+
+#navbarNavAltMarkup > div.navbar-nav.ml-auto > a:hover{
+    color: darkslategrey;
+}
+
+.updates{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.new{
+    width: 500px;
+    height: 65px;
+    background: #5BC8AC;
+    margin: 10px auto;
+    border-radius: 10px;
+    color: white;
+    padding: 15px;
+}
+
+.createdBy{
+    border-top: 1px #888888 solid;
+    color: #336B87;
+    text-align: center;
 }
