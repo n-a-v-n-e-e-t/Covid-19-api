@@ -16,7 +16,7 @@ app.get('/',(req,res)=>{
 
 app.get('/home',(req,res)=>{
     
-    globalData()
+    globalData.getGlobal_data()
     .then(data=> res.render('home',{data : data}))
     .catch(err=>res.render('page404'))
 });
@@ -29,9 +29,12 @@ app.get('/india',(req,res)=>{
         }).catch(err=>console.log(err));
 });
     
-// app.get('/global',(req,res)=>{
-//     res.render('global');
-// });
+app.get('/global',(req,res)=>{
+//     globalData.tabledata().then(data=> res.send(data));
+   globalData.tabledata()
+   .then(table=> {res.render('global',{table:table})})
+   .catch(err=> res.render('page404'))
+});
 
 app.get('*',(req,res)=>{
     res.render('page404');
